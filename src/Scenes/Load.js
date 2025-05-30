@@ -11,7 +11,9 @@ class Load extends Phaser.Scene {
 
         // Load tilemap information
         this.load.image("tilemap_tiles", "tilemap_packed.png");                         // Packed tilemap
-        this.load.tilemapTiledJSON("platformer-level-1", "platformer-level-1.tmj");   // Tilemap in JSON
+        this.load.image("tilemap_tiles_farm", "tilemap_packed_farm.png");               // Packed tilemap
+        this.load.image("tilemap_tiles_sky", "tilemap-backgrounds_packed.png");
+        this.load.tilemapTiledJSON("platformerLevel1", "platformerLevel1.tmj");   // Tilemap in JSON
 
         // Load the tilemap as a spritesheet
         this.load.spritesheet("tilemap_sheet", "tilemap_packed.png", {
@@ -26,6 +28,11 @@ class Load extends Phaser.Scene {
         // The multiatlas was created using TexturePacker and the Kenny
         // Particle Pack asset pack.
         this.load.multiatlas("kenny-particles", "kenny-particles.json");
+
+        for (let i = 0; i <= 4; i++) {
+            this.load.audio(`footstep${i}`, `footstep_concrete_00${i}.ogg`);
+        }
+        
     }
 
     create() {
