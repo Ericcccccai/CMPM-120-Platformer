@@ -99,7 +99,7 @@ class Platformer extends Phaser.Scene {
         // movement vfx
 
         my.vfx.walking = this.add.particles(0, 0, "kenny-particles", {
-            frame: ['smoke_03.png', 'smoke_09.png'],
+            frame: ['dirt_01.png', 'dirt_02.png'],
             // TODO: Try: add random: true
             scale: {start: 0.03, end: 0.1},
             // TODO: Try: maxAliveParticles: 8,
